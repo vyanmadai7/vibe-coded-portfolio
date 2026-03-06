@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slide-in-from-bottom {
+    from { transform: translateY(var(--tw-enter-translate-y, 1rem)); }
+    to { transform: translateY(0); }
+  }
+}
+
+@utility animate-spotlight {
+  animation: spotlight 2s ease .75s 1 forwards;
+}
+
+@utility animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+@utility animate-in {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@utility fade-in {
+  --tw-enter-opacity: 0;
+  animation-name: fade-in;
+}
+
+@utility slide-in-from-bottom-4 {
+  --tw-enter-translate-y: 1rem;
+  animation-name: slide-in-from-bottom, fade-in;
+}
+
+@utility slide-in-from-bottom-6 {
+  --tw-enter-translate-y: 1.5rem;
+  animation-name: slide-in-from-bottom, fade-in;
+}
+
+@utility slide-in-from-bottom-8 {
+  --tw-enter-translate-y: 2rem;
+  animation-name: slide-in-from-bottom, fade-in;
+}
+
+@utility delay-200 {
+  animation-delay: 200ms;
+}
+
+@utility delay-500 {
+  animation-delay: 500ms;
+}
+
+body {
+  @apply bg-neutral-950 text-neutral-50 antialiased;
+}

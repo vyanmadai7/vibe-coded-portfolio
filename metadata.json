@@ -1,0 +1,5 @@
+{
+  "name": "3D Interactive Spline Scene",
+  "description": "A beautiful interactive 3D scene integration using Spline, Spotlight, and shadcn-like components.",
+  "requestFramePermissions": []
+}
