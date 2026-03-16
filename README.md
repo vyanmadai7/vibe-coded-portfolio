@@ -1,1 +1,1 @@
-coded with Gemini 
+coded with Gemini with 21st dev prompts 
